@@ -12,7 +12,11 @@ function greenHandler(words, pos, letter) {
     });
     return newWords;
 }
-
+function blackHandler(words, letter) {
+    letter = letter.toLowerCase(); 
+    let newWords= words.filter(word=>
+        {return !(word.includes(letter))});
+    }
 function yellowHandler(words, letter) {
     let newWords = words.filter(word => {
         word = word.toLowerCase();

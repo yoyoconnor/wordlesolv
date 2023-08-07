@@ -7,8 +7,9 @@ import WordleRow from './Greens'; // Import the WordleRow component
 function App() {
   const [guess, setGuess] = useState('');
   const [words, setWords] = useState([]);
-  const handleGuessChange = (newGuess) => {
+  const handleGuessChange = async (newGuess) => {
     setGuess(newGuess);
+    handleSubmit();
   };
 
   const handleSubmit = async () => {
