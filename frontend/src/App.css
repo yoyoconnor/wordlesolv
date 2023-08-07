@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+.word-list-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}

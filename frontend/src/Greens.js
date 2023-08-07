@@ -30,7 +30,7 @@ return 'B'
           maxLength="5"
           value={guess}
           onChange={handleGuessChange}
-          placeholder="Enter a 5-letter guess"
+          placeholder="Enter all your Greens"
         />
       </form>
     </div>
