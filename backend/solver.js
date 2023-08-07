@@ -44,7 +44,7 @@ function solver(greenparam, yellowparam){
     let yellowletters = yellowparam;
     //greenletters filter
     for (let i = 0; i < greenletters.length; i++) {
-        if(!(greenletters.charAt(i) === '0')){
+        if(!(greenletters.charAt(i) === ' ')){
         words = greenHandler(words, i, greenletters.charAt(i));
     }
 }

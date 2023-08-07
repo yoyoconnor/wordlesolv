@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useState,} from 'react';
 import './App.css';
+import WordList from './WordList';
+
+import WordleRow from './Greens'; // Import the WordleRow component
 
 function App() {
+  const [guess, setGuess] = useState('');
+  const [words, setWords] = useState([]);
+  const handleGuessChange = (newGuess) => {
+    setGuess(newGuess);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch(`https://wordlesolver.onrender.com/api/?greens=${guess}&yellows[]=`);
+      const data = await response.json();
+      //console.log('API Response:', data);
+      setWords(data);
+      console.log(words)
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WordleRow onGuessChange={handleGuessChange} /> {/* Pass the handler as a prop */}
+      <button onClick={handleSubmit}>Submit</button>
+      <ul>
+      {words.map((word) => (
+        <li key={word}>{word}</li>
+      ))}
+    </ul>
     </div>
   );
 }

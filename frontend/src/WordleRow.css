@@ -1,0 +1,54 @@
+/* WordleRow.css */
+.wordle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .wordle-feedback {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .feedback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10%;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .feedback-G {
+    background-color: #2ecc71;
+  }
+  .feedback-B
+    {
+        background-color: #070707;
+    }
+  
+  .guess-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    width: 150px;
+  }
+  
+  .guess-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2ecc71;
+    color: #fff;
+    cursor: pointer;
+  }
+  
