@@ -5,10 +5,10 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.get('/api', (req, res) => {
-    const { greens, yellows } = req.query;
+    const { greens, yellows,reds } = req.query;
     console.log(greens);
     console.log(yellows);
-    res.send(solver(greens, yellows));
+    res.send(solver(greens, yellows,reds));
 });
 
 

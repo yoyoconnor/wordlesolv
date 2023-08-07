@@ -19,7 +19,6 @@ const Keyboard=({onMapChange})=>{
             onMapChange(map2);}
     }
     return(<>
-        <h2>Enter all your yellows on the keys</h2>
         <div className="keyboard-container">
             {alphabet.split('').map((letter) => (
                 <KeyBox letter={letter} color={keyMap.get(letter)} onClick={handleClick}/>

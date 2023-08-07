@@ -12,10 +12,11 @@ function greenHandler(words, pos, letter) {
     });
     return newWords;
 }
-function blackHandler(words, letter) {
+function redHandler(words, letter) {
     letter = letter.toLowerCase(); 
     let newWords= words.filter(word=>
         {return !(word.includes(letter))});
+    return newWords;
     }
 function yellowHandler(words, letter) {
     let newWords = words.filter(word => {
@@ -42,7 +43,7 @@ function yellowHandlerWithPos(words, pos, letter) {
     });
     return newWords;
 }
-function solver(greenparam, yellowparam){
+function solver(greenparam, yellowparam, redparam){
     let words = wordstxt;
     let greenletters = greenparam;
     let yellowletters = yellowparam;
@@ -60,6 +61,10 @@ function solver(greenparam, yellowparam){
             words = yellowHandlerWithPos(words, yel.charAt(0), yel.charAt(1));
     
         }
+    }
+
+    for(let red of redparam){
+        words = redHandler(words, red);
     }
 return words;
 }
