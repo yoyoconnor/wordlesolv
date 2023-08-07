@@ -19,6 +19,7 @@ function App() {
     try {
       // Format the yellowArray as a comma-separated string
       const yellowParam = yellowArray.join('&yellows[]=');
+      const redparam = redArray.join('&reds[]=');
       console.log(`https://wordlesolver.onrender.com/api/?greens=${guess}&yellows[]=${yellowParam}`);
       const response = await fetch(`https://wordlesolver.onrender.com/api/?greens=${guess}&yellows[]=${yellowParam}`);
       const data = await response.json();
@@ -41,6 +42,9 @@ function App() {
     map.forEach((value, key) => {
       if (value === 1) {
         updatedYellowArray.push(`6${key}`);
+      }
+      if (value === 2) {
+        updatedYellowArray.push(`${key}`);
       }
     });
     setYellowArray(updatedYellowArray);
