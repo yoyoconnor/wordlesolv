@@ -8,6 +8,7 @@ app.get('/api', (req, res) => {
     const { greens, yellows,reds } = req.query;
     console.log(greens);
     console.log(yellows);
+    console.log(reds)
     res.send(solver(greens, yellows,reds));
 });
 

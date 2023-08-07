@@ -47,6 +47,7 @@ function solver(greenparam, yellowparam, redparam){
     let words = wordstxt;
     let greenletters = greenparam;
     let yellowletters = yellowparam;
+    let redletters = redparam;
     //greenletters filter
     for (let i = 0; i < greenletters.length; i++) {
         if(!(greenletters.charAt(i) === ' ')){
@@ -63,7 +64,7 @@ function solver(greenparam, yellowparam, redparam){
         }
     }
 
-    for(let red of redparam){
+    for(let red of redletters){
         words = redHandler(words, red);
     }
 return words;
