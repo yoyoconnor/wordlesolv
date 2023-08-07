@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './WordleRow.css'; // Import your custom CSS file for styling
 
-const WordleRow = ({ onGuessChange }) => {
+const WordleRow = ({ onGuessChange, enterEvent }) => {
   const [guess, setGuess] = useState('');
   const [feedback, setFeedback] = useState(Array(5).fill(''));
 
@@ -9,6 +9,13 @@ const WordleRow = ({ onGuessChange }) => {
     const newGuess = event.target.value.toUpperCase();
     setGuess(newGuess);
     onGuessChange(newGuess);
+  };
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent default Enter key behavior
+      // You can add your own custom logic here if needed
+      enterEvent();
+    }
   };
 function colors(param) {if(!(param==' '||param=='')){
     return 'G'
@@ -31,6 +38,7 @@ return 'B'
           value={guess}
           onChange={handleGuessChange}
           placeholder="Enter all your Greens"
+          onKeyDown={handleKeyDown}
         />
       </form>
     </div>

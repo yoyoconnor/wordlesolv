@@ -50,7 +50,7 @@ function App() {
 
   return (
       <div className="App">
-        <WordleRow onGuessChange={handleGuessChange} />
+        <WordleRow onGuessChange={handleGuessChange} enterEvent={handleSubmit}/>
         <button className="submit-button" onClick={handleSubmit}>Submit</button>
         <Keyboard onMapChange={handleKeyMap} />
         <div className="word-list-container">

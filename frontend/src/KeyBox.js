@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const KeyBox = (props) => {
   const [indice, setIndice] = useState(0);
   const colors = ['black', 'yellow', 'red'];
+  const textColors = ['white', 'black', 'black'];
   const handleClick = () => {
     if(indice==0){setIndice(1)}
     else if(indice==1){setIndice(2)}
@@ -13,10 +14,11 @@ const KeyBox = (props) => {
   
 
   const boxStyle = {
+    fontSize: '25px',
     width: '60px',
     height: '60px',
     padding: '10px',
-    color:'white',
+    color: textColors[indice],
     backgroundColor: colors[indice],
     borderRadius: '10px',
     display: 'flex',
@@ -27,7 +29,7 @@ const KeyBox = (props) => {
 
   return (
     <div style={boxStyle} onClick={handleClick}>
-      {props.letter}
+      {props.letter.toUpperCase()}
     </div>
   );
 };
