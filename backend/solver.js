@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // Read the words from the file and split into an array
-let wordstxt = fs.readFileSync('actwords.txt', 'utf8').split('\n');
+let wordstxt = fs.readFileSync('newwords.txt', 'utf8').split('\n');
 //console.log(wordstxt);
 function greenHandler(words, pos, letter) {
     letter = letter.toLowerCase();
