@@ -15,9 +15,10 @@ const KeyBox = (props) => {
 
   const boxStyle = {
     fontSize: '20px',
-    width: '50px',
-    height: '50px',
+    width: '3vw',
+    height: '3vw',
     padding: '10px',
+
     color: textColors[indice],
     backgroundColor: colors[indice],
     borderRadius: '10px',

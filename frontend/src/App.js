@@ -4,6 +4,7 @@ import WordList from './WordList';
 import KeyBox from './KeyBox';
 import Keyboard from './Keyboard';
 
+
 import WordleRow from './Greens'; // Import the WordleRow component
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
       <div className="App">
         <WordleRow onGuessChange={handleGuessChange} enterEvent={handleSubmit}/>
         <button className="submit-button" onClick={handleSubmit}>Submit</button>
+        <div className="centered-content">
         <Keyboard onMapChange={handleKeyMap} />
         <div className="word-list-container">
         <span style={{padding: 0 }}>
@@ -65,6 +67,7 @@ function App() {
             <h2 style={{ margin: '0 10px', fontSize: '1.5rem' }}>{word} </h2>
           ))}
         </span>
+        </div>
         </div>
       </div>
   );

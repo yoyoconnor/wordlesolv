@@ -16,16 +16,23 @@
   
   .feedback {
     display: inline-flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 15vw;
+    height: 15vw;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10%;
     background-color: #444;
     color: #fff;
   }
+  @media(orientation: landscape) {
+    .feedback {
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+
   
   .feedback-G {
     background-color: #2ecc71;
