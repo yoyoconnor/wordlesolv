@@ -19,6 +19,7 @@ function App() {
 
   const handleSubmit = async () => {
     try {
+      setWords([]);
       // Format the yellowArray as a comma-separated string
       const yellowParam = yellowArray.join('&yellows[]=');
       const redparam = redArray.join('&reds[]=');
