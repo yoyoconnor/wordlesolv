@@ -8,36 +8,31 @@
     margin-right: 25px;
     margin-top: 25px;
   }
-  @media (handheld) {
-    .feedback {
-      width: 5vh;
-      height: 5vh;
-    }
-  }
     
   
   .wordle-feedback {
     display: flex;
     gap: 10px;
+    @media handheld{
+      gap: 5px;
+    }
   }
   
   .feedback {
     display: inline-flex;
     align-items: left;
     justify-content: center;
-    width: 15vw;
-    height: 15vw;
+    width: 8vw;
+    height: 8vw;
+    @media handheld{
+      width: 5vh;
+      height: 5vh;
+    }
     font-size: 18px;
     font-weight: bold;
     border-radius: 10%;
     background-color: #444;
     color: #fff;
-  }
-  @media(orientation: landscape) {
-    .feedback {
-      width: 8vw;
-      height: 8vw;
-    }
   }
 
   
