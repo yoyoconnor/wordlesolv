@@ -9,7 +9,7 @@ import WordleRow from './Greens'; // Import the WordleRow component
 
 function App() {
   const [guess, setGuess] = useState('');
-  const [words, setWords] = useState(['hi']);
+  const [words, setWords] = useState(['']);
   const [keyMap, setKeyMap] = useState(new Map());
   const [yellowArray, setYellowArray] = useState([]);
   const [redArray, setRedArray] = useState([]);
@@ -58,7 +58,7 @@ function App() {
   return (
       <div className="App">
         <WordleRow onGuessChange={handleGuessChange} enterEvent={handleSubmit}/>
-        <button className="submit-button" onClick={handleSubmit} ontouchstart={handleSubmit}>Submit</button>
+        <button className="submit-button" onClick={handleSubmit}>Submit</button>
         <div className="centered-content">
         <Keyboard onMapChange={handleKeyMap} />
         <div className="word-list-container">
