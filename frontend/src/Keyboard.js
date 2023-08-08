@@ -18,13 +18,23 @@ const Keyboard=({onMapChange})=>{
         if (onMapChange){
             onMapChange(map2);}
     }
-    return(<>
-        <div className="keyboard-container">
-            {alphabet.split('').map((letter) => (
-                <KeyBox letter={letter} color={keyMap.get(letter)} onClick={handleClick}/>
-            ))}
-        </div>
+    return (
+        <>
+            <h2><span className="yellow">Yellow </span>keys indicate letters that are in the word but in the wrong position</h2>
+            <h2><span className="red">Red </span>keys indicate letters that are not in the word</h2>
+            <div className="keyboard-container">
+                {alphabet.split('').map((letter) => {
+                    if (letter === 'q' || letter === 'a' || letter === 'z') {
+                        return (<>
+                        <div key={letter} className="keyboard-break"></div> 
+                        <KeyBox key={letter} letter={letter} color={keyMap.get(letter)} onClick={handleClick} />
+                        </>);
+                    }
+                    return <KeyBox key={letter} letter={letter} color={keyMap.get(letter)} onClick={handleClick} />;
+                })}
+            </div>
         </>
-    )
+    );
+    
 }
 export default Keyboard;
