@@ -9,7 +9,7 @@ import WordleRow from './Greens'; // Import the WordleRow component
 
 function App() {
   const [guess, setGuess] = useState('');
-  const [words, setWords] = useState([]);
+  const [words, setWords] = useState(['hi']);
   const [keyMap, setKeyMap] = useState(new Map());
   const [yellowArray, setYellowArray] = useState([]);
   const [redArray, setRedArray] = useState([]);
