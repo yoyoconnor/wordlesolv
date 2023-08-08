@@ -20,9 +20,9 @@ const Keyboard=({onMapChange})=>{
     }
     return (
         <>
+         <h3><span className="yellow">Yellow </span>keys indicate letters that are in the word but in the wrong position</h3>
+            <h3><span className="red">Red </span>keys indicate letters that are not in the word</h3>
          <div className="keyboard-container">
-            <h2><span className="yellow">Yellow </span>keys indicate letters that are in the word but in the wrong position</h2>
-            <h2><span className="red">Red </span>keys indicate letters that are not in the word</h2>
                 {alphabet.split('').map((letter) => {
                     if (letter === 'q' || letter === 'a' || letter === 'z') {
                         return (<>

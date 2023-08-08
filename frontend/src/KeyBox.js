@@ -17,11 +17,11 @@ const KeyBox = (props) => {
     fontSize: '20px',
     width: '3vw',
     height: '3vw',
-    padding: '10px',
+    padding: '1vw',
 
     color: textColors[indice],
     backgroundColor: colors[indice],
-    borderRadius: '10px',
+    borderRadius: '1vw',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
