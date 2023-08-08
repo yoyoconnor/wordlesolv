@@ -19,7 +19,6 @@ function App() {
 
   const handleSubmit = async () => {
     try {
-      setWords([]);
       // Format the yellowArray as a comma-separated string
       const yellowParam = yellowArray.join('&yellows[]=');
       const redparam = redArray.join('&reds[]=');
@@ -59,7 +58,7 @@ function App() {
   return (
       <div className="App">
         <WordleRow onGuessChange={handleGuessChange} enterEvent={handleSubmit}/>
-        <button className="submit-button" onClick={handleSubmit}>Submit</button>
+        <button className="submit-button" onClick={handleSubmit} ontouchstart={handleSubmit}>Submit</button>
         <div className="centered-content">
         <Keyboard onMapChange={handleKeyMap} />
         <div className="word-list-container">
