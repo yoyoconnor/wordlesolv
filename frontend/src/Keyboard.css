@@ -8,6 +8,11 @@
     margin-top: 10px;
     margin-bottom: 0px;
 }
+.grey{
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
 .keyboard-container {
     display: flex;
     flex-wrap: wrap; /* Allow the boxes to wrap if they exceed the container's width */
