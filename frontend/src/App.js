@@ -27,6 +27,7 @@ function App() {
       const data = await response.json();
       
       setWords(data);
+      console.log("hi");
       console.log(words);
     } catch (error) {
       console.error('Error fetching data:', error);
