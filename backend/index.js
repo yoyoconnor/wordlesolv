@@ -1,4 +1,5 @@
 const solver = require('./solver.js');
+const ranker = require('./ranker.js');
 const express = require('express');
 const cors = require('cors');
 
@@ -19,7 +20,8 @@ app.get('/api', (req, res) => {
     console.log(greens);
     console.log(yellows);
     console.log(reds)
-    res.send(solver(greens, yellows,reds));
+    res.send(ranker(solver(greens, yellows,reds)));
+    console.log(ranker(solver(greens, yellows,reds)));
 });
 
 
