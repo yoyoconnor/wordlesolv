@@ -23,7 +23,7 @@ function App() {
       const yellowParam = yellowArray.join('&yellows[]=');
       const redparam = redArray.join('&reds[]=');
       console.log(`https://wordlesolver.onrender.com/api/?greens=${guess}&yellows[]=${yellowParam}&reds=${redparam}`);
-      const response = await fetch(`https://wordlesolver.onrender.com/api/?greens=${guess}&yellows[]=${yellowParam}&reds=${redparam}`);
+      const response = await fetch(`https://wordlesolver.onrender.com/api/?greens=${guess}&yellows[]=${yellowParam}&reds=${redparam}`,{ mode: 'no-cors'});
       const data = await response.json();
       
       setWords(data);
