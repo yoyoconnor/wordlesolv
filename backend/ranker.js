@@ -24,15 +24,21 @@ function rankerHelper(word,WordList)
     {
         if (word.length === WordList[i].length)
         {
-            let count = 0;
+            let gcount = 0;
+
             for(let j = 0; j < word.length; j++)
             {
                 if(word.charAt(j) === WordList[i].charAt(j))
                 {
-                    count++;
+                    gcount++;
                 }
+                else if(WordList[i].includes(word.charAt(j)))
+                {
+                    score+=1;
+                }
+
             }
-                score+=count*count;
+                score=gcount*gcount;
     
         }
     }
