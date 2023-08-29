@@ -20,7 +20,7 @@ app.get('/api', (req, res) => {
     console.log(greens);
     console.log(yellows);
     console.log(reds)
-    res.send(ranker(solver(greens, yellows,reds)));
+    res.send(ranker(solver(greens, yellows,reds),greens));
     console.log(ranker(solver(greens, yellows,reds)));
 });
 
